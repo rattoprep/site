@@ -4,8 +4,8 @@ import Image from 'next/image';
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { FaGithubSquare } from 'react-icons/fa';
+import { BsArrowRight } from "react-icons/bs";
+import { FaInstagramSquare, FaWhatsappSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/context/active-section-context';
 import bg_img from '../public/main/bg_first.jpeg'
@@ -81,7 +81,7 @@ export default function Intro() {
         }}
       >
         <Link href="#contato" className='group bg-white text-gray-900 px-7 py-3 flex items-center
-       gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-300 active:scale-105 transition'
+       gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-300 active:scale-105 transition dark:bg-white/10  dark:text-white/60 dark:hover:bg-white/10 dark:hover:text-white'
           onClick={() => {
             setActiveSection("Contato");
             setTimeOfLastClick(Date.now());
@@ -92,16 +92,16 @@ export default function Intro() {
         </Link>
        
         <a className='bg-white p-4 text-gray-700 flex items-center
-    gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 
+    gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 
     transition cursor-pointer borderBlack  dark:bg-white/10 dark:text-white/60'
-          href='https://linkedin.com' target='_blank'>
-          <BsLinkedin />
+          href='https://contate.me/rattopreparacoes' target='_blank'>
+          <FaWhatsappSquare />
         </a>
         <a className='bg-white p-4 text-gray-700 flex items-center
     gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 
     transition cursor-pointer borderBlack  dark:bg-white/10  dark:text-white/60'
-          href='https://github.com' target='_blank'>
-          <FaGithubSquare />
+          href='https://www.instagram.com/rattopreparacoes/' target='_blank'>
+          <FaInstagramSquare />
         </a>
       </motion.div>
 
